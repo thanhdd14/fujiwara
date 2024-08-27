@@ -117,6 +117,7 @@ $herp_slide.find('.slick-slide').eq(0).addClass('slide-animation');
 //matchHeight
 jQuery(function ($) {
     $('.features-list .features-list__item .features-list__box .features-list__box-ct .features-list__box-ct-ttl').matchHeight();
+    $('.features-list .features-list__item .features-list__box').matchHeight();
 });
 
 
@@ -134,27 +135,65 @@ jQuery(function ($) {
 //     }).addClass('active');
 // });
 
+var window_type;
+var $window = $(window);
+if ($window.width() <= 834) {
+    window_type = 'sp';
+} else {
+    window_type = 'pc';
+}
+$(window).resize(function() {
+    if($window.width() <= 834){
+        if( (window_type != 'sp') ){
+            location.reload();
+        }
+    }else{
+        if(window_type != 'pc'){
+            location.reload();
+        }
+    }
+});
 
-//backtop
-// jQuery(document).ready(function ($) {
-//     $(".js-backtop").hide();
-//     $(window).on("scroll", function () {
-//         if($(window).scrollTop()> $("#footer").offset().top - $(window).outerHeight()){
-//             $(".js-backtop").addClass("active");
-//         }
-//         else {
-//             $(".js-backtop").removeClass("active");
-//         }
-//         if ($(this).scrollTop() > 100) {
-//             $(".js-backtop").fadeIn("fast");
-//         } else {
-//             $(".js-backtop").fadeOut("fast");
-//         }
-//     });
-//     $('.js-backtop').click(function () {
-//         $('body,html').animate({
-//             scrollTop: 0
-//         }, 500);
-//         return false;
-//     });
-// });
+$(document).ready(function() {
+    if($(window).width()<834){
+        $(".js-features-list").slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: false,
+            centerMode: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 640,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }
+    else{
+    }
+});
+
+
+
+
+
+
+if ($(".sec-mv").length > 0) {
+    jQuery(document).ready(function ($) {
+        $(window).on("scroll", function () {
+            if($(window).scrollTop()>  $(".sec-mv").outerHeight()){
+                $("#header").removeClass("top-page");
+            }
+            else {
+                $("#header").addClass("top-page");
+            }
+        });
+    });
+}
