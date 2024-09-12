@@ -140,6 +140,7 @@ $(document).ready(function() {
                 }
             ]
         });
+        
         $(".js-clinic-list").slick({
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -186,4 +187,26 @@ if ($(".sec-mv").length > 0) {
             }
         });
     });
+    
+    jQuery(document).ready(function ($) {
+        $(window).on("scroll", function () {
+            var h1 =  $(".js-sec-features").offset().top - $(window).outerHeight();
+            var dow = scrollY - h1 ;
+            var scrol = dow/1000;
+            
+            if($(window).scrollTop()> h1 ){
+                $(".about-bg").css("opacity",scrol);
+            }
+            else {
+                $(".about-bg").css("opacity",0);
+            }
+        });
+    });
+    
 }
+
+
+setTimeout(function () {
+    $(".c-btn__02").append("<span class='arow'></span>");
+    $(".news-list .news-list__item a").append("<span class='arow'></span>")
+},1200);
