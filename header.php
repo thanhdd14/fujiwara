@@ -72,8 +72,8 @@ if (! empty($fontawesome_link)) {
                 <?php wp_nav_menu($main_menu_args); ?>
             </ul>
             <div class="header-nav__btn pc-tb">
-                <a href="" class="c-btn__01 c-btn__01--blue">Web予約</a>
-                <a href="" class="c-btn__01">求人情報</a>
+               <a href="" class="c-btn__01 c-btn__01--blue"><span>Web予約</span></a>
+                <a href="" class="c-btn__01"><span>求人情報</span></a>
             </div>
             <div class="header-contact sp-tb">
                 <div class="header-contact__box">
