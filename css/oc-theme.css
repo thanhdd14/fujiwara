@@ -4370,19 +4370,62 @@ a:hover {
 .wrapp-blog-page.px-3 {
   padding-top: 100px;
 }
-.blog-content ul,.blog-content ol{
+.blog-content ul,.blog-content ol,.periodontal-detail ul ,.periodontal-detail ol{
   padding-left: 2rem;
   margin-bottom: 1rem;
 }
-.blog-content ul li{
+.blog-content ul li,.periodontal-detail ul li{
   list-style: disc;
 }
 .contact-top .contact-top-box .top-line{
   margin-bottom: 10px;
 }
 
+
+
+.periodontal-detail h2,.periodontal-detail h1{
+  display: block;
+  line-height: 1.4;
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: #f8f9f9;
+  padding: 13px 30px;
+  margin-bottom: 22px;
+}
+
+.periodontal-detail h3{
+  display: block;
+  font-weight: 700;
+  line-height: 1.4;
+  position: relative;
+  font-size: 2.2rem;
+  border-bottom: 1px solid #e6ecee;
+  padding: 31px 0 8px;
+  margin-bottom: 20px;
+}
+
+.periodontal-detail--count__item h3:before{
+  counter-increment: a;
+  content: counters(a, ".") ".";
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
 @media screen and (max-width: 834px) {
   .wrapp-blog-page.px-3,section.text-bg-top.img-cover-white,section.text-bg-top.img-cover-white {
     padding-top: 60px;
+  }
+  .periodontal-detail h2,  .periodontal-detail h1{
+    font-size: 1.8rem;
+    padding: 16px 20px 14px;
+  }
+  .periodontal-detail h3{
+    font-size: 1.8rem;
+    padding: 11px 0 8px;
+    margin-bottom: 8px;
+  }
+  .periodontal-detail--count__item h3:before{
+    top: 11px;
   }
 }
