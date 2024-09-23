@@ -4378,10 +4378,10 @@ a:hover {
   list-style: disc;
 }
 .periodontal-detail ol li{
-  list-style: disc;
+  list-style: auto;
 }
 .periodontal-detail ul li{
-  list-style: auto;
+  list-style: disc;
 }
 .contact-top .contact-top-box .top-line{
   margin-bottom: 10px;
