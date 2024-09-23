@@ -4374,8 +4374,14 @@ a:hover {
   padding-left: 2rem;
   margin-bottom: 1rem;
 }
-.blog-content ul li,.periodontal-detail ul li{
+.blog-content ul li{
   list-style: disc;
+}
+.periodontal-detail ol li{
+  list-style: disc;
+}
+.periodontal-detail ul li{
+  list-style: auto;
 }
 .contact-top .contact-top-box .top-line{
   margin-bottom: 10px;
